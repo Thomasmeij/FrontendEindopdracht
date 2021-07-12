@@ -1,0 +1,26 @@
+button {
+    color: white;
+    cursor: pointer;
+    background-color: #e50914;
+    line-height: normal;
+    margin: 5px 2% 0 0;
+    padding: 3px 12px;
+    font-weight: 100;
+    border: transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    text-decoration: crimson;
+}
+
+button + button {
+    margin-left: 8px;
+}
+
+
+.content {
+    margin: 32px;
+}
+
+button.form-button {
+    width: 100%;
+}

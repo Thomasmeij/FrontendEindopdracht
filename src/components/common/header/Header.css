@@ -1,0 +1,22 @@
+.header {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    line-height: 90px;
+    margin: 0 0 0 2%;
+    color: inherit;
+}
+img {
+    width: 167px;
+    height : 45px;
+    vertical-align: middle;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+}
