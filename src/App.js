@@ -9,7 +9,9 @@ function App() {
   return (
     <div className="content">
         <Header />
-        <Row title= "Trending" fetchUrl={request.fetchTrending} />
+        <Row title= "Trending"
+             fetchUrl={request.fetchTrending}
+             isLargeRow />
         <Row title= "Popular" fetchUrl={request.fetchPopular} />
         <Row title= "Top Rated" fetchUrl={request.fetchTopRated} />
         <Row title= "Action Movies" fetchUrl={request.fetchActionMovies} />
@@ -22,3 +24,5 @@ function App() {
 }
 
 export default App;
+
+//default islargeRow = true

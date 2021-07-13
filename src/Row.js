@@ -4,7 +4,7 @@ import "./Row.css";
 
 const base_imgUrl = "https://image.tmdb.org/t/p/original/";
 
-function Row({ title, fetchUrl }) {
+function Row({ title, fetchUrl, isLargeRow }) {
     const [movies, setMovies] = useState([]);
 
     //wanneer de pagina geladen wordt of de regel verschijnt op het scherm, run dit stukje code en run het eenmalig
@@ -29,8 +29,9 @@ function Row({ title, fetchUrl }) {
                 {movies.map(movie => (
                     <img
                         key= {movie.id}
-                        className= "row__poster"
-                        src={`${base_imgUrl}${movie.poster_path}`}
+                        className={ `row__poster ${isLargeRow && "row__largePoster"}`}
+                        src={`${base_imgUrl}${
+                            isLargeRow ? movie.poster_path : movie.backdrop_path}`}
                         alt={movie.name} />
                 ))}
             </div>
