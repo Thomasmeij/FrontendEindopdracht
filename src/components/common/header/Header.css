@@ -13,12 +13,6 @@
     color: inherit;
 }
 
-img {
-    color: inherit;
-    width: 167px;
-    height : 45px;
-    vertical-align: middle;
-}
 .navbar {
     display: flex;
     justify-content: flex-end;

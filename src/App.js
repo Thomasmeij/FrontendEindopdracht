@@ -11,6 +11,8 @@ function App() {
         <Header />
         <Row title= "Trending" fetchUrl={request.fetchTrending} />
         <Row title= "Popular" fetchUrl={request.fetchPopular} />
+        <Row title= "Top Rated" fetchUrl={request.fetchTopRated} />
+        <Row title= "Action Movies" fetchUrl={request.fetchActionMovies} />
 
         {/*<Navbar />*/}
         {/*<Features />*/}
