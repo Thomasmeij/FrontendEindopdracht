@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../navbar/Navbar";
 import "./Header.css"
-import logo from "./img/netflix-logo.png";
+import logo from "./img/netflixlogo.png";
 
 function Header () {
-
+    
     return (
         <div className="header">
             <section className="header-logo">
@@ -16,8 +16,6 @@ function Header () {
                <Navbar />
             </section>
         </div>
-
-
     )
 }
 

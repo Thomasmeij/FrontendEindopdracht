@@ -1,8 +1,6 @@
 import React from "react";
 import { useHistory } from 'react-router-dom';
 import "./Navbar.css"
-import logo from "../header/img/netflix-logo.png"
-
 
 function Navbar () {
     const history = useHistory();

@@ -1,8 +1,9 @@
 .header {
     padding: 5px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    /*background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url("./img/netflix-background.jpg");*/
 }
 
 .header-logo {
@@ -11,7 +12,9 @@
     margin: 0 0 0 2%;
     color: inherit;
 }
+
 img {
+    color: inherit;
     width: 167px;
     height : 45px;
     vertical-align: middle;
