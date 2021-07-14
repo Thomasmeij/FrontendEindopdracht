@@ -33,7 +33,3 @@
     text-decoration: crimson;
 }
 
-button + button {
-    margin-left: 8px;
-}
-
