@@ -21,7 +21,7 @@ function Banner() {
         fetchData();
     }, []);
 
-    //@Todo misschien limit de overview tot max 150 woorden.
+    //@Todo misschien limit de overview tot maximaal aantal woorden.
     // console.log("wat geeft de movie in de banner: ", movie);
 
     return (

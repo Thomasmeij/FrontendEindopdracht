@@ -1,4 +1,25 @@
-button {
+
+.navBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    height: 25px;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    background-color: #110e0e;
+}
+
+.nav__logo {
+    position: fixed;
+    left: 20px;
+    width: 80px;
+    object-fit: contain;
+}
+
+.nav__button {
     color: white;
     cursor: pointer;
     background-color: #e50914;
@@ -7,8 +28,8 @@ button {
     padding: 3px 12px;
     font-weight: 100;
     border: transparent;
-    border-radius: 3px;
-    font-size: 16px;
+    border-radius: 4px;
+    font-size: 8px;
     text-decoration: crimson;
 }
 
@@ -16,11 +37,3 @@ button + button {
     margin-left: 8px;
 }
 
-
-.content {
-    margin: 32px;
-}
-
-button.form-button {
-    width: 100%;
-}

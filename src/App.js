@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import { Header } from "./components/common"
+import {Navbar} from "./components/common"
 import Row from "./Row";
 import request from "./request";
 import Banner from "./Banner";
@@ -9,7 +9,8 @@ import Banner from "./Banner";
 function App() {
   return (
     <div className="application">
-        <Header />
+        {/*<Header />*/}
+        <Navbar />
         <Banner />
         <Row title= "Trending"
              fetchUrl={request.fetchTrending}
@@ -18,8 +19,6 @@ function App() {
         <Row title= "Top Rated" fetchUrl={request.fetchTopRated} />
         <Row title= "Action Movies" fetchUrl={request.fetchActionMovies} />
 
-        {/*<Navbar />*/}
-        {/*<Features />*/}
         {/*<Footer />*/}
     </div>
   );
