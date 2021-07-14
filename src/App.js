@@ -3,12 +3,14 @@ import './App.css';
 import { Header } from "./components/common"
 import Row from "./Row";
 import request from "./request";
+import Banner from "./Banner";
 
 
 function App() {
   return (
-    <div className="content">
+    <div className="application">
         <Header />
+        <Banner />
         <Row title= "Trending"
              fetchUrl={request.fetchTrending}
              isLargeRow />
