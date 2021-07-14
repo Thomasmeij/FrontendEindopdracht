@@ -26,11 +26,11 @@ function Navbar () {
                         onClick={() => history.push('/signup')}>
                     Registreren
                 </button>
-                 <button className="nav__button"
-                         type="button"
-                         onClick={() => history.push('/')}>
-                Log uit
-                  </button>
+                {/* <button className="nav__button"*/}
+                {/*         type="button"*/}
+                {/*         onClick={() => history.push('/')}>*/}
+                {/*Log uit*/}
+                {/*  </button>*/}
             </div>
 
         </nav>
