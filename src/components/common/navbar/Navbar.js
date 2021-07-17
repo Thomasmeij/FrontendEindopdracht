@@ -18,13 +18,13 @@ function Navbar () {
             <div className="nav__buttons">
                 <button className="nav__button"
                     type="button"
-                    onClick={() => history.push('/signin')}>
+                    onClick={() => history.push('/signIn')}>
                     Log in
                 </button>
                 <button className="nav__button"
                         type="button"
-                        onClick={() => history.push('/signup')}>
-                    Registreren
+                        onClick={() => history.push('/signUp')}>
+                    Register
                 </button>
                 {/* <button className="nav__button"*/}
                 {/*         type="button"*/}

@@ -1,5 +1,5 @@
 
-body {
+.body .login__content {
     position: relative;
     display: flex;
     align-items: center;
