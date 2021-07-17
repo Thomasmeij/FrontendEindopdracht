@@ -1,21 +1,14 @@
-import React, {useContext} from 'react';
-import {Link, Switch} from 'react-router-dom';
-import {Banner, Navbar, Row} from "../components/common";
-import request from "../request";
+import React, { useContext } from 'react';
+import { Navbar } from "../components/common";
+import { authContext } from "../context/Authcontext";
 
 function Home() {
+    const authData = useContext( authContext );
 
     return (
         <>
             <div className="content">
                 <Navbar />
-                <Banner />
-                <Row title= "Trending"
-                     fetchUrl={request.fetchTrending}
-                     isLargeRow />
-                <Row title= "Popular" fetchUrl={request.fetchPopular} />
-                <Row title= "Top Rated" fetchUrl={request.fetchTopRated} />
-                <Row title= "Action Movies" fetchUrl={request.fetchActionMovies} />
             </div>
         </>
     );

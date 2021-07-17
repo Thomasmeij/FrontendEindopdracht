@@ -1,5 +1,9 @@
 /*identical to SignInpage, @Todo  merge into 1 file */
 
+p {
+    color: white;
+}
+
 body .login__content {
     position: relative;
     display: flex;
@@ -15,7 +19,6 @@ body .login__content {
     background-color: #b3b3b3;
     background-blend-mode: multiply;
 }
-
 
 body .login {
     display: flex;
