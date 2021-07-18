@@ -7,7 +7,7 @@ import request from "../request";
 function Profile() {
     const {authState: {user},} = useContext(authContext);
     const [content, setContent] = useState(null);
-    console.log("gebruikers data uit authcontext: ", user);
+    //console.log("gebruikers data uit authcontext: ", user);
 
     useEffect(() => {
         async function fetchDataProfile() {
@@ -23,7 +23,6 @@ function Profile() {
                             },
                         }
                     );
-                console.log("wat is in de response: ", response);
                 setContent(response.data);
             } catch (e) {
 
@@ -33,7 +32,7 @@ function Profile() {
         fetchDataProfile();
     }, []);
 
-    console.log("wat is de content: ", content);
+    //console.log("wat is de content: ", content);
 
     return (
         <>
