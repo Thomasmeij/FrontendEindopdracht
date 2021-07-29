@@ -7,7 +7,8 @@ const base_imgUrl = "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchUrl, isLargeRow }) {
     const [movies, setMovies] = useState([]);
 
-    //wanneer de pagina geladen wordt of de regel verschijnt op het scherm, run dit stukje code en run het eenmalig
+    //wanneer de pagina geladen wordt of de regel verschijnt op het scherm,
+    // run dit stukje code en run het eenmalig
 
     useEffect(() => {
         async function fetchData(){
