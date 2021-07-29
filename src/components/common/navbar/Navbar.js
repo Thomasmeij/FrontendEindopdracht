@@ -18,7 +18,7 @@ function Navbar () {
             <div className="nav__buttons">
                 <button className="nav__button"
                     type="button"
-                    onClick={() => history.push('/signin')}>
+                    onClick={() => history.push('/login')}>
                     Log in
                 </button>
                 <button className="nav__button"
