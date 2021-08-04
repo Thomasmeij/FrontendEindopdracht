@@ -1,6 +1,6 @@
 **Netflix-Clone: InstallatieHandleiding**
 
-Dit project is na gebouwde frontend clone van netflix. Het is geschreven in React plus CSS.
+Dit project is een na gebouwde frontend clone van netflix. Het is geschreven in React plus CSS.
 Verder maakt het gebruik van The Movie DB API voor het weergeven van films plus beschrijving.
 
 **Screenshot:**
@@ -22,10 +22,10 @@ Installeer de volgende depencies:\
     Password:   password\
 
 **Functionalities:**\
-de gebruiker kan films en tv series opzoeken vanuit TMDB.\
-de gebruiker ziet "upcoming" en "trending" releases. Data wordt wekelijks bijgewerkt.\
+De gebruiker kan films en tv series opzoeken vanuit TMDB.\
+De gebruiker ziet "upcoming" en "trending" releases. Data wordt wekelijks bijgewerkt.\
 De gebruiker kan klikken op een film, vervolgens wordt er een trailer afgespeeld.\
-de gebruiker kan films in de banner aanpassen. Hier wordt de titel, (release date) en \
+De gebruiker kan films in de banner aanpassen. Hier wordt de titel, (release date) en\
 een korte beschrijving weergegeven.\
 Een bezoeker kan zich registreren op de /signup pagina.\
 De gebruiker kan inloggen op de /login pagina.\
