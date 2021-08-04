@@ -8,18 +8,18 @@ Verder maakt het gebruik van The Movie DB API voor het weergeven van films plus 
 
 **Lijst van dependencies om de applicatie lokaal te runnen:**\
 Installeer de volgende depencies:
--     npm i firebase\
-      npm i axios\
-      npm i env install\
-      npm i react-router-dom\
-      npm install\
-+  TMDB API key:\
-+   Maak een .env file en voeg hieraan toe:\
-+   Run project: npm start\
++     npm i firebase
+      npm i axios
+      npm i env install
+      npm i react-router-dom
+      npm install
++  TMDB API key:
++   Maak een .env file en voeg hieraan toe:
++   Run project: npm start
 
 **Met deze gegevens kan worden ingelogd op de applicatie:**\
     Email:      example@development.com\
-    Password:   password\
+    Password:   password
 
 **Functionalities:**\
 de gebruiker kan films en tv series opzoeken vanuit TMDB.\
