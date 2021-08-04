@@ -6,9 +6,10 @@ const requests = {
     fetchTrending: `/trending/all/week?api_key=${APIKey}&language=en-US`,
     fetchPopular: `/movie/popular?api_key=${APIKey}&language=en-US&page=1`,
     fetchTopRated: `/movie/top_rated?api_key=${APIKey}&language=en-US`,
-    fetchActionMovies: `/discover/movie?api_key=${APIKey}&with_genres=28`,
+    fetchActionMovies: `/discover/movie?api_key=${APIKey}&with_genres=28`
 }
 
 export default requests;
 
+//fetchLatestReleasesEnglish: `/movie/latest?api_key=${APIKey}&language=en-US`
 //https://developers.themoviedb.org/3/movies/get-movie-details

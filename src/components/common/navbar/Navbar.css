@@ -9,6 +9,13 @@
 
     display: flex;
     justify-content: space-between;
+
+    /*animation*/
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+
+.nav__black {
     background-color: #110e0e;
 }
 

@@ -2,6 +2,7 @@ import React ,{ useRef, useState } from 'react';
 import "./Signup.css"
 import {useAuth} from "../contexts/AuthContext";
 import {Link, useHistory} from "react-router-dom";
+import {Navbar} from "../components/common";
 
 function Signup() {
     const emailRef = useRef();
@@ -32,6 +33,7 @@ function Signup() {
 
     return (
         <>
+            <Navbar />
             <div id="background">
                 <div className="login__content">
 

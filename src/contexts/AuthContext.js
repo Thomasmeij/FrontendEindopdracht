@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
     }
 
     //the verification if the state is changed
-    //We dont render any of the application untill the user has been set
+    //We dont render any of the application until the user has been set
     useEffect(() =>{
         const unsubscribe = auth.onAuthStateChanged(user => {
             setCurrentUser(user);
