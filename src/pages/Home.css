@@ -1,0 +1,53 @@
+
+.main {
+    width: 100%;
+    margin-top: -100px;
+    background-size: cover;
+    align-items: center;
+    overflow-x: hidden;
+    justify-content: center;
+    display: flex;
+    background-position: center;
+    min-height: 710px;
+    background-image: url(https://bit.ly/2E3scwW);
+}
+
+.area__title{
+    color: white;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.area__title h1{
+    font-size: 60px;
+    word-spacing: 15px;
+    line-height: 75px;
+}
+
+.area__title h3{
+    margin-top: 15px;
+    font-size: 27px;
+    font-weight: normal;
+}
+
+.home__input{
+    padding: 16px 16px;
+    border: transparent;
+}
+
+.home__button {
+    color: white;
+    cursor: pointer;
+    background-color: #e50914;
+    line-height: normal;
+    padding: 16px 16px;
+    font-weight: 100;
+    border: transparent;
+    font-size: 16px;
+    text-decoration: crimson;
+}
+

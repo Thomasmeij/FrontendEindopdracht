@@ -7,21 +7,6 @@ import request from "../request";
 import "./Content.css"
 
 function Content() {
-    // const [error, setError] = useState();
-    // const { currentUser, logout } = useAuth();
-    // const history = useHistory();
-    //
-    // async function handleLogout(){
-    //     setError(" ")
-    //
-    //     try{
-    //         const response = await logout();
-    //         history.push("/login")
-    //         console.log(response);
-    //     } catch {
-    //         setError("Failed to logout")
-    //     }
-    // }
 
     return(
         <>
@@ -40,3 +25,21 @@ function Content() {
 }
 
 export default Content;
+
+
+
+// const [error, setError] = useState();
+// const { currentUser, logout } = useAuth();
+// const history = useHistory();
+//
+// async function handleLogout(){
+//     setError(" ")
+//
+//     try{
+//         const response = await logout();
+//         history.push("/login")
+//         console.log(response);
+//     } catch {
+//         setError("Failed to logout")
+//     }
+// }
