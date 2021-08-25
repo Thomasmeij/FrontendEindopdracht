@@ -1,7 +1,5 @@
 
 import React from "react"
-// import {Link, useHistory} from "react-router-dom";
-// import { useAuth } from "../contexts/AuthContext";
 import {Banner, Navbar, Row} from "../components/common";
 import request from "../request";
 import "./Content.css"
@@ -18,28 +16,14 @@ function Content() {
                      isLargeRow />
                 <Row title= "Popular" fetchUrl={request.fetchPopular} />
                 <Row title= "Top Rated" fetchUrl={request.fetchTopRated} />
+                <Row title= "Netflix Originals" fetchUrl={request.fetchNetflixOriginals} />
                 <Row title= "Action Movies" fetchUrl={request.fetchActionMovies} />
+                <Row title= "Comedy Movies" fetchUrl={request.fetchComedyMovies} />
+                <Row title= "Horror Movies" fetchUrl={request.fetchHorrorMovies} />
+                <Row title= "Documentaries" fetchUrl={request.fetchDocumentaries} />
             </div>
         </>
     )
 }
 
 export default Content;
-
-
-
-// const [error, setError] = useState();
-// const { currentUser, logout } = useAuth();
-// const history = useHistory();
-//
-// async function handleLogout(){
-//     setError(" ")
-//
-//     try{
-//         const response = await logout();
-//         history.push("/login")
-//         console.log(response);
-//     } catch {
-//         setError("Failed to logout")
-//     }
-// }
