@@ -9,16 +9,16 @@ function Navbar () {
     const { currentUser, logout } = useAuth();
     const [show, handleShow] = useState(false);
 
-    useEffect(()=> {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 100){
-                handleShow(true);
-            } else handleShow(false);
-        });
-        return () => {
-            window.removeEventListener("scroll", null);
-        };
-    }, []);
+    // useEffect(()=> {
+    //     window.addEventListener("scroll", () => {
+    //         if (window.scrollY > 100){
+    //             handleShow(true);
+    //         } else handleShow(false);
+    //     });
+    //     return () => {
+    //         window.removeEventListener("scroll", null);
+    //     };
+    // }, []);
 
     return (
         <nav className={`navBar ${show && "nav__black"}`}>

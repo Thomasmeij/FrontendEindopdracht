@@ -1,88 +1,99 @@
-import React ,{ useRef, useState } from 'react';
-import "./Signup.css"
+import React ,{ useState } from 'react';
+import "./globalstyling/Signup.css"
 import {useAuth} from "../contexts/AuthContext";
 import {Link, useHistory} from "react-router-dom";
-import {Navbar} from "../components/common";
+import {Footer, Form, Navbar} from "../components/common";
 
 function Signup() {
-    const emailRef = useRef();
-    const passwordRef = useRef();
-    const passwordConfirmationRef = useRef();
+    const [emailAddress, setEmailAddress] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordConfirmation, setPasswordConfirmation] = useState('');
+
     const { signup } = useAuth();
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const history = useHistory();
 
+    const isInvalid = emailAddress === "" || password === "" || passwordConfirmation === "";
+
     async function handleSubmit(e){
         e.preventDefault();
 
-        if (passwordRef.current.value !== passwordConfirmationRef.current.value) {
+        if (password !== passwordConfirmation) {
             return setError("Passwords do not match")
         }
 
         try{
             setError("");
             setLoading(true);
-            const response = await signup(emailRef.current.value, passwordRef.current.value);
+            const response = await signup(emailAddress, password);
             history.push("/login");
             console.log(response);
         } catch {
-            setError("Failed to creat an account")
+            setError("Failed to create an account")
+            setEmailAddress("");
+            setPassword("");
+            setPasswordConfirmation("");
+            setLoading(false)
+            console.error(error)
         }
     }
 
     return (
         <>
             <Navbar />
-            <div id="background">
-                <div className="login__content">
+            <div className="main">
+                <Form>
+                    <Form.Title>Register</Form.Title>
+                    {error && <Form.Error>{error}</Form.Error>}
 
-                    <form onSubmit={handleSubmit}
-                          className="login">
-                        <h1 className="login__title">Sign Up</h1>
-                        {error && alert(setError)}
-                        <div className="login__group">
-                            <label className="login__group__label"> </label>
-                            <input ref={emailRef}
-                                   className="login__group__input"
-                                   placeholder="Email Address"
-                                   type="email"
-                            />
-                        </div>
-                        <div className="login__group">
-                            <label className="login__group__label"> </label>
-                            <input ref={passwordRef}
-                                   className="login__group__input"
-                                   placeholder="Password"
-                                   type ="password"
-                            />
-                        </div>
-                        <div className="login__group">
-                            <label className="login__group__label"> </label>
-                            <input ref={passwordConfirmationRef}
-                                   className="login__group__input"
-                                   placeholder="Confirm Password"
-                                   type="password"
-                            />
-                        </div>
+                    <Form.Base onSubmit={handleSubmit} method="POST">
 
-                        <button disabled={loading}
-                                className="login__sign-in"
-                                type="submit">
+                        <Form.Group>
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control
+                                placeholder="Email Address"
+                                type="email"
+                                value={emailAddress}
+                                onChange={({ target }) => setEmailAddress(target.value)}
+                            />
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control
+                                placeholder="Password"
+                                type ="password"
+                                value={password}
+                                onChange={({ target }) => setPassword(target.value)}
+                            />
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>Password Confirmation</Form.Label>
+                            <Form.Control
+                                placeholder="Password"
+                                type ="password"
+                                value={passwordConfirmation}
+                                onChange={({ target }) => setPasswordConfirmation(target.value)}
+                            />
+                        </Form.Group>
+
+                        <Form.Submit type="submit" disabled={loading + isInvalid}>
                             Register
-                        </button>
+                        </Form.Submit>
 
-                        <div className="login__uselessText">
-                            <p className="login__text">Remember me?
-                                <Link to="/login"> Click to login </Link>
-                            </p>
-                            <p className="login__text login__secondary-cta__text--need-help">
-                                Need help?</p>
-                        </div>
-                    </form>
+                        <Form.Text>
+                            Remember me? <Link to="/login">Click here to Login</Link>
+                        </Form.Text>
+                        <Form.TextSmall>
+                            This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
+                        </Form.TextSmall>
 
-                </div>
+                    </Form.Base>
+                </Form>
             </div>
+            <Footer />
         </>
     )
 }

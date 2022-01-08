@@ -12,18 +12,21 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
     useEffect(() => {
         async function fetchData(){
-            const request = await axios.get(fetchUrl);
-            setMovies(request.data.results);
-            return request;
+            try {
+                const request = await axios.get(fetchUrl);
+                setMovies(request.data.results);
+            } catch (e){
+                console.log("Something went wrong", e);
+                console.error(e)
+            }
         }
         fetchData();
-
     }, [fetchUrl] );
 
     //console.log(movies);
 
     return (
-        <div className= "row">
+        <div className= "row" data-testid="resolved">
             <h2> {title} </h2>
 
             <div className="row__posters">

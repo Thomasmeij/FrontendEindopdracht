@@ -3,7 +3,6 @@ import axios from "../../../axios";
 import requests from "../../../request";
 import "./Banner.css"
 
-
 const base_imgUrl = "https://image.tmdb.org/t/p/original/";
 
 function Banner() {
@@ -11,12 +10,16 @@ function Banner() {
 
     useEffect(() => {
         async function fetchData(){
-            const request = await axios.get(requests.fetchPopular);
-            setMovie(
-                request.data.results[
-                    Math.floor(Math.random() * request.data.results.length -1 )]
-            );
-            return request;
+            try {
+                const request = await axios.get(requests.fetchPopular);
+                setMovie(
+                    request.data.results[
+                        Math.floor(Math.random() * request.data.results.length - 1)]
+                );
+            } catch (e) {
+                console.log("Something went wrong", e);
+                console.error(e)
+            }
         }
         fetchData();
     }, []);

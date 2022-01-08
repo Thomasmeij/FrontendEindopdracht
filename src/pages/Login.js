@@ -1,17 +1,19 @@
 
-import React, {useRef, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import {useAuth} from "../contexts/AuthContext";
-import "./Login.css"
 import { Link, useHistory } from "react-router-dom"
-import {Navbar} from "../components/common";
+import "./globalstyling/Login.css"
+import {Footer, Form, Navbar} from "../components/common";
 
 function Login () {
-    const emailRef = useRef();
-    const passwordRef = useRef();
+    const [emailAddress, setEmailAddress] = useState('');
+    const [password, setPassword] = useState('');
     const { login } = useAuth();
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const history = useHistory();
+
+    const isInvalid = password === '' || emailAddress === '';
 
     async function handleSubmit(e){
         e.preventDefault();
@@ -19,61 +21,64 @@ function Login () {
         try{
             setError("");
             setLoading(true);
-            const response = await login(emailRef.current.value,
-                passwordRef.current.value)
+            const response = await login(emailAddress, password)
             history.push("/")
 
             console.log(response);
-        } catch {
-            setError("Failed to log in")
+        } catch (error) {
+            setError("Failed to log in" , error)
+            setEmailAddress('');
+            setPassword('');
+            setLoading(false)
+            console.error(error)
         }
     }
 
     return (
         <>
             <Navbar />
-            <div id="background">
-                <div className="login__content">
+            <div className="main">
+                <Form>
+                    <Form.Title>Sign In</Form.Title>
+                    {error && <Form.Error>{error}</Form.Error>}
 
-                    <form onSubmit={handleSubmit}
-                          className="login">
-                        <h1 className="login__title">Log In</h1>
-                        <p>
-                            {error && alert(setError)}
-                        </p>
-                        <div className="login__group">
-                            <label className="login__group__label"> </label>
-                            <input ref={emailRef}
-                                   className="login__group__input"
-                                   placeholder="Email Address"
-                                   type="email"
+                    <Form.Base onSubmit={handleSubmit} method="POST">
+
+                        <Form.Group>
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control
+                                placeholder="Email Address"
+                                type="email"
+                                value={emailAddress}
+                                onChange={({ target }) => setEmailAddress(target.value)}
                             />
-                        </div>
-                        <div className="login__group">
-                            <label className="login__group__label"> </label>
-                            <input ref={passwordRef}
-                                   className="login__group__input"
-                                   placeholder="Password"
-                                   type ="password"
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control
+                                placeholder="Password"
+                                type ="password"
+                                value={password}
+                                onChange={({ target }) => setPassword(target.value)}
                             />
-                        </div>
+                        </Form.Group>
 
-                        <button disabled={loading}
-                                className="login__sign-in"
-                                type="submit">
-                            Log In
-                        </button>
+                        <Form.Submit type="submit" disabled={loading + isInvalid}>
+                            Login
+                        </Form.Submit>
 
-                        <div className="login__uselessText">
-                            <p className="login__text">
-                                Don't have an account? <Link to="/signup"> Register here </Link>
-                            </p>
-                        </div>
-                    </form>
+                        <Form.Text>
+                            Don't have an account? <Link to="/signup">Register here</Link>
+                        </Form.Text>
+                        <Form.TextSmall>
+                            This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
+                        </Form.TextSmall>
 
-                </div>
+                    </Form.Base>
+                </Form>
             </div>
-
+            <Footer />
         </>
     )
 }

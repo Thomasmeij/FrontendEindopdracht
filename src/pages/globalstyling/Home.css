@@ -1,6 +1,7 @@
 
 .main {
     width: 100%;
+    height: 100%;
     margin-top: -100px;
     background-size: cover;
     align-items: center;
@@ -22,7 +23,7 @@
     margin-top: 70px;
 }
 
-.area__title h1{
+.area__title title{
     font-size: 60px;
     word-spacing: 15px;
     line-height: 75px;
@@ -50,4 +51,5 @@
     font-size: 16px;
     text-decoration: crimson;
 }
+
 

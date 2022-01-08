@@ -1,7 +1,9 @@
 **Netflix-Clone: InstallatieHandleiding**
 
-Dit project is een frontend clone van netflix. Het is geschreven in React plus CSS. 
-Het maakt gebruik van firebase voor het opslaan en registreren van gebruikers.
+Dit project is een frontend clone van netflix. Het is geschreven in Javascript en maakt gebruik van de REACT, Firebase en Styled-Components. 
+De applicatie bevat vier pagina's login, signup, home en content. Authenticatie wordt afgehandeld door firebase en is aanwezig op elke pagina.
+In de Navigatiebar valt te zien of een gebruiker is ingelogd.
+Het opslaan en registreren van gebruikers wordt afgehandeld door firebase.
 Tot slot maakt het gebruik van The Movie DB API voor het weergeven van films en series plus beschrijving.
 
 **Screenshot:**

@@ -1,8 +1,8 @@
 
 import React from "react"
-import {Banner, Navbar, Row} from "../components/common";
+import {Banner, Footer, Navbar, Row} from "../components/common";
 import request from "../request";
-import "./Content.css"
+import "./globalstyling/Content.css"
 
 function Content() {
 
@@ -21,6 +21,7 @@ function Content() {
                 <Row title= "Comedy Movies" fetchUrl={request.fetchComedyMovies} />
                 <Row title= "Horror Movies" fetchUrl={request.fetchHorrorMovies} />
                 <Row title= "Documentaries" fetchUrl={request.fetchDocumentaries} />
+                <Footer />
             </div>
         </>
     )

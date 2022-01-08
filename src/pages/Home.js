@@ -1,7 +1,8 @@
 import React from "react"
 import {Navbar} from "../components/common";
-import "./Home.css"
+import "./globalstyling/Home.css"
 import { useHistory } from "react-router-dom";
+import Footer from "../components/common/footer/Footer";
 
 function Home() {
     const history = useHistory();
@@ -10,9 +11,9 @@ function Home() {
         <>
             <Navbar />
             <div className="main">
-                <div className="area__title">
-                    <h1>Unlimited films, TV </h1>
-                    <h1>Programmes and more.</h1>
+                <main className="area__title">
+                    <h1>Unlimited films, TV Programmes and more.</h1>
+
                     <h3>Watch anywhere. Cancel anytime.</h3>
                     <h6>Ready to watch? Enter your email to create or restart your membership</h6>
 
@@ -26,8 +27,9 @@ function Home() {
                             Get Started
                         </button>
                     </div>
-                </div>
+                </main>
             </div>
+            <Footer />
         </>
     )
 }
