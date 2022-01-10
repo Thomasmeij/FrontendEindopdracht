@@ -27,10 +27,11 @@ function Signup() {
             setError("");
             setLoading(true);
             const response = await signup(emailAddress, password);
-            history.push("/login");
+            history.push("/");
             console.log(response);
+
         } catch {
-            setError("Failed to create an account")
+            setError("Failed to create an account", error)
             setEmailAddress("");
             setPassword("");
             setPasswordConfirmation("");
