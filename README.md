@@ -10,14 +10,14 @@ De styling is een mix van css en styling components.
 ![img.png](img.png)
 
 
-**De applicatie is gebouwd met: **
+### De applicatie is gebouwd met:
 Om de applicatie lokaal te kunnen runnen moeten deze libraries geinstalleerd worden.
 * [React.js](https://reactjs.org/)
 * [Firebase](https://firebase.google.com/)
 * [node.js](https://nodejs.org/)
 
 
-###Installatie van je eigen project:
+### Installatie van je eigen project:
 1. Maak een eigen account aan op https://www.themoviedb.org/
 2. Vraag hier je eigen API key op.
 3. Clone deze repo:
