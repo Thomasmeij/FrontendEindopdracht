@@ -10,13 +10,14 @@ De styling is een mix van css en styling components.
 ![img.png](img.png)
 
 
-**De applicatie is gebouwd met behulp van:**
+**De applicatie is gebouwd met: **
+Om de applicatie lokaal te kunnen runnen moeten deze libraries geinstalleerd worden.
 * [React.js](https://reactjs.org/)
 * [Firebase](https://firebase.google.com/)
 * [node.js](https://nodejs.org/)
 
 
-###Installatie van je eigen project:\
+###Installatie van je eigen project:
 1. Maak een eigen account aan op https://www.themoviedb.org/
 2. Vraag hier je eigen API key op.
 3. Clone deze repo:
@@ -40,7 +41,20 @@ REACT_APP_TMDB_API_KEY= "mijn_api_key"
     - Password: password
 ```
 **Optional:**
-Het is mogelijk om een eigen backend te gebruiken
+De authenticatie wordt afgehandeld door een firebase backend. Hiervoor moet de configuratie worden 
+toegevoegd aan het .env.local bestand.
+```
+   - REACT_APP_NETFLIX_API_KEY= "AIzaSyCDiIR1bg9os2KCSL27AUIL-faTGRxKEOk" 
+   - REACT_APP_NETFLIX_AUTH_DOMAIN=netflix-clone-ce406.firebaseapp.com
+   - REACT_APP_NETFLIX_DATABASE_URL=https://netflix-clone-ce406-default-rtdb.europe-west1.firebasedatabase.app
+   - REACT_APP_NETFLIX_PROJECT_ID=netflix-clone-ce406
+   - REACT_APP_NETFLIX_STORAGE_BUCKET=netflix-clone-ce406.appspot.com
+   - REACT_APP_NETFLIX_MESSAGING_SENDER_ID=366584016967
+   - REACT_APP_NETFLIX_APP_ID=1:366584016967:web:6bd08c5065b5b0069ec162
+   - REACT_APP_NETFLIX_APP_MEASUREMENTID=G-VFYZEJRYEB
+```
+
+het is natuurlijk altijd mogelijk om je eigen backend te gebruiken.
 
 
 
