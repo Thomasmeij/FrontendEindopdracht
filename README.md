@@ -2,7 +2,7 @@
 
 Dit project is een frontend clone van netflix. Het is geschreven in Javascript en maakt gebruik van de REACT, Firebase en Styled-Components. 
 De applicatie bevat vier pagina's login, signup, home en content. De Contentpagina is alleen toegankelijk voor geregistreerde gebruikers.
-Het opslaan en registreren van gebruikers wordt afgehandeld door firebase. De authenticatie wordt begehouden op elke pagina.
+Het opslaan en registreren van gebruikers wordt afgehandeld door firebase. De authenticatie wordt bijgehouden op elke pagina.
 Tot slot wordt via The Movie DB API films en series plus beschrijving weergegeven op de contentpagina.
 De styling is een mix van css en styling components.
 
