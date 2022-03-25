@@ -7,7 +7,7 @@ Tot slot wordt via The Movie DB API films en series plus beschrijving weergegeve
 De styling is een mix van css en styling components.
 
 **Screenshot:**
-![img.png](img.png)
+![](src/images/img.png)
 
 
 ### De applicatie is gebouwd met:
