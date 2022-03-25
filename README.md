@@ -2,16 +2,16 @@
 
 Dit project is een frontend clone van netflix. Het is geschreven in Javascript en maakt gebruik van de REACT, Firebase en Styled-Components. 
 De applicatie bevat vier pagina's login, signup, home en content. De Contentpagina is alleen toegankelijk voor geregistreerde gebruikers.
-Het opslaan en registreren van gebruikers wordt afgehandeld door firebase. De authenticatie wordt begehouden op elke pagina.
+Het opslaan en registreren van gebruikers wordt afgehandeld door firebase. De authenticatie wordt bijgehouden op elke pagina.
 Tot slot wordt via The Movie DB API films en series plus beschrijving weergegeven op de contentpagina.
 De styling is een mix van css en styling components.
 
-**Screenshot:**\
-![img.png](src/images/img.png)
+**Screenshot:**
+![img.png](img.png)
 
 
 ### De applicatie is gebouwd met:
-Om de applicatie lokaal te kunnen runnen moeten de volgende libraries geinstalleerd worden.
+Om de applicatie lokaal te kunnen runnen moeten deze libraries geinstalleerd worden.
 * [React.js](https://reactjs.org/)
 * [Firebase](https://firebase.google.com/)
 * [node.js](https://nodejs.org/)
@@ -33,8 +33,16 @@ npm install
 ```js
 REACT_APP_TMDB_API_KEY= "mijn_api_key"
 ```
-7. Het toevoegen van firebase aan de applicatie. Hiervoor moet de volgende configuratie worden
-   toegevoegd aan het .env.local bestand.
+7. Aanmaken van een account op de applicatie
+    - optie 1: Creëer een eigen account op de signup-page
+    - optie 2: Met de volgende login-gegevens kan worden ingelogd op de applicatie:
+```
+    - Login email: example@development.com
+    - Password: password
+```
+**Optional:**
+De authenticatie wordt afgehandeld door een firebase backend. Hiervoor moet de configuratie worden 
+toegevoegd aan het .env.local bestand.
 ```
    - REACT_APP_NETFLIX_API_KEY= "AIzaSyCDiIR1bg9os2KCSL27AUIL-faTGRxKEOk" 
    - REACT_APP_NETFLIX_AUTH_DOMAIN=netflix-clone-ce406.firebaseapp.com
@@ -45,18 +53,8 @@ REACT_APP_TMDB_API_KEY= "mijn_api_key"
    - REACT_APP_NETFLIX_APP_ID=1:366584016967:web:6bd08c5065b5b0069ec162
    - REACT_APP_NETFLIX_APP_MEASUREMENTID=G-VFYZEJRYEB
 ```
-*optional: het is natuurlijk altijd mogelijk om je eigen backend te gebruiken.*
-8. De applicatie kan nu opgestart worden met het volgende commando:
-```sh
-npm start
-```
-9. Aanmaken van een account op de applicatie
-    - optie 1: Creëer een eigen account op de signup-page
-    - optie 2: Met de volgende login-gegevens kan worden ingelogd op de applicatie:
-```
-    - Email: example@development.com
-    - Password: password
-```
+
+het is natuurlijk altijd mogelijk om je eigen backend te gebruiken.
 
 
 
