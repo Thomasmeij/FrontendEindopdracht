@@ -1,7 +1,7 @@
 import React ,{ useState } from 'react';
 import "./globalstyling/Signup.css"
 import {useAuth} from "../contexts/AuthContext";
-import {Link, useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {Footer, Form, Navbar} from "../components/common";
 
 function Signup() {
@@ -85,7 +85,7 @@ function Signup() {
                         </Form.Submit>
 
                         <Form.Text>
-                            Remember me? <Link to="/login">Click here to Login</Link>
+                            Remember me? <Form.Link to="/login">Click here to Login</Form.Link>
                         </Form.Text>
                         <Form.TextSmall>
                             This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as ReachRouterLink } from 'react-router-dom';
 
 export const Container = styled.div`
   display: flex;
@@ -90,6 +91,14 @@ export const Group = styled.div`
 export const Label = styled.div`
   color: white;
   font-size: 20px;
-    `;
+`;
+
+export const Link = styled(ReachRouterLink)`
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 

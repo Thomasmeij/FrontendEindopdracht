@@ -1,7 +1,7 @@
 
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {useAuth} from "../contexts/AuthContext";
-import { Link, useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import "./globalstyling/Login.css"
 import {Footer, Form, Navbar} from "../components/common";
 
@@ -69,7 +69,7 @@ function Login () {
                         </Form.Submit>
 
                         <Form.Text>
-                            Don't have an account? <Link to="/signup">Register here</Link>
+                            Don't have an account? <Form.Link to="/signup">Register here </Form.Link>
                         </Form.Text>
                         <Form.TextSmall>
                             This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.

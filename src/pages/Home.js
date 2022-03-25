@@ -2,7 +2,7 @@ import React from "react"
 import {Navbar} from "../components/common";
 import "./globalstyling/Home.css"
 import { useHistory } from "react-router-dom";
-import Footer from "../components/common/footer/Footer";
+import { Footer }  from "../components/common/";
 
 function Home() {
     const history = useHistory();

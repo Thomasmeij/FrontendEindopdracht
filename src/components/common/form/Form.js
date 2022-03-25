@@ -10,6 +10,7 @@ import {
     Group,
     Label,
     Submit,
+    Link
 } from "./FormStyles";
 
 export default function Form( {children, ...restProps}) {
@@ -54,6 +55,9 @@ Form.Label = function FormTextSmall({ children, ...restProps}){
     return <Label {...restProps}> {children} </Label>;
 };
 
+Form.Link = function FormTextSmall({ children, ...restProps}){
+    return <Link {...restProps}> {children} </Link>;
+};
 
 
 
