@@ -6,7 +6,7 @@ Het opslaan en registreren van gebruikers wordt afgehandeld door firebase. De au
 Tot slot wordt via The Movie DB API films en series plus beschrijving weergegeven op de contentpagina.
 De styling is een mix van css en styling components.
 
-**Screenshot:**
+**Homepage:**
 ![](src/images/img.png)
 
 
